@@ -11,7 +11,7 @@ import {
   BarElement,
   Title,
 } from "chart.js";
-import Chat from "./chat";
+import Chat from "../chat";
 ChartJS.register(
   ArcElement,
   Tooltip,
@@ -261,6 +261,7 @@ const PlannerDashboard = () => {
                 <thead>
                   <tr className="text-left border-b">
                     {[
+                      "",
                       "ID",
                       "Type",
                       "Title",
@@ -282,6 +283,7 @@ const PlannerDashboard = () => {
                 <tbody>
                   {tableData.map((item, index) => (
                     <tr key={index} className="border-b hover:bg-gray-50">
+                      <td className="py-2 px-2">{index}</td>
                       <td className="py-2 px-2">{item.event_id}</td>
                       <td className="py-2 px-2 capitalize">{item.type}</td>
                       <td className="py-2 px-2">{item.title}</td>
